@@ -210,7 +210,7 @@ function getContent($url, $geturl = false)
 				$dt = new DateTime("@$create_time");
 				$create_time = $dt->format("d M Y H:i:s A");
 				$videoKey = getKey($contentURL);
-				$cleanVideo = "https://api2-16-h2.musical.ly/aweme/v1/play/?video_id=$videoKey&vr_type=0&is_play_url=1&source=PackSourceEnum_PUBLISH&media_type=4";
+				$cleanVideo = "https://api.vhtear.com/tiktokdl?link=$videoKey&apikey=82f719145a1345fe8425b2b1faa7dc10";
 				$cleanVideo = getContent($cleanVideo, true);
 				if (!file_exists("user_videos") && $store_locally){
 					mkdir("user_videos");
